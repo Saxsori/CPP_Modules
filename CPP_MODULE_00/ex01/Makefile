@@ -2,7 +2,7 @@ SRC = Megaphone.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
-NAME = Megaphone
+NAME = MyAwesomePhonebook
 
 CC = g++
 
