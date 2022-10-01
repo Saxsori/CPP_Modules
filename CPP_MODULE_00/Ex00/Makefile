@@ -1,10 +1,10 @@
-SRC = Megaphone.cpp
+SRC = Megaphone.cpp 
 
 OBJ = ${SRC:.cpp=.o}
 
 NAME = Megaphone
 
-CC = g++
+CC = c++
 
 CFLAGS = -Wall -Werror -Wextra -std=c++98
 
@@ -22,5 +22,3 @@ fclean : clean
 		${RM} ${NAME}
  
 re : fclean all
-
-.phony : all fclean clean re 
