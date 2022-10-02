@@ -1,5 +1,5 @@
 # include <iostream>
-# include <string>
+# include <cstring>
 # include <cctype>
 
 int main (int agc, char **agv)
