@@ -6,50 +6,42 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 19:23:53 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/01 01:08:54 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/02 16:01:13 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PHONEBOOK_HPP
 #define	PHONEBOOK_HPP
 # include <iostream>
+# include <string>
+#include <sstream>
 # include "contact.hpp"
+# define BBLK "\e[1;30m"
+# define BRED "\e[1;31m"
+# define BGRN "\e[1;32m"
+# define BYEL "\e[1;33m"
+# define BBLU "\e[1;34m"
+# define BMAG "\e[1;35m"
+# define BCYN "\e[1;36m"
+# define BWHT "\e[1;37m"
+# define BPUR "\e[0;35m"
+# define DEFCOLO "\033[0m"
 
 class phonebook
 {
 	private:
-	int		_index;
-	int		_length;
 	contact _contact_list[8];
+	int		_index;
+	int		_contact_num;
 
 	public:
 	phonebook();
 	~phonebook();
-	int	phonebook::GetLength();
-	void	add_contact();
+	void		AddContact();
+	void		SearchContact();
+	std::string	GetColumn(std::string str);
+	bool 		isNumeric(std::string str);
+	void		FindContact();
 };
-
-void	phonebook::add_contact(void)
-{
-	this->_index++;
-	if (this->_index == 8)
-		this->_index = 0;
-	std::cout << "contact num " << this->_index << std::endl;
-	this->_contact_list[this->_index].Fill__ContactFields();
-}
-
-phonebook::phonebook()
-{
-	this->_index = -1;
-	this->_length = 10;
-}
-
-int	phonebook::GetLength()
-{
-	return (this->_length);
-}
-
-phonebook::~phonebook(){}
-
 
 #endif
