@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/02 20:26:58 by aaljaber          #+#    #+#              #
-#    Updated: 2022/10/02 20:26:59 by aaljaber         ###   ########.fr        #
+#    Created: 2022/10/02 21:25:15 by aaljaber          #+#    #+#              #
+#    Updated: 2022/10/02 21:33:59 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = Megaphone.cpp 
+SRC = main.cpp Zombie.cpp zombieHorde.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
-NAME = Megaphone
+NAME = MoarBrainz
 
 CC = c++
 

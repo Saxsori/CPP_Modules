@@ -5,16 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/02 20:26:58 by aaljaber          #+#    #+#              #
-#    Updated: 2022/10/02 20:26:59 by aaljaber         ###   ########.fr        #
+#    Created: 2022/10/02 20:27:24 by aaljaber          #+#    #+#              #
+#    Updated: 2022/10/02 20:59:52 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = Megaphone.cpp 
+SRC = main.cpp Zombie.cpp randomChump.cpp newZombie.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
-NAME = Megaphone
+NAME = BraiiiiiiinnnzzzZ
 
 CC = c++
 
