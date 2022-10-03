@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 15:45:47 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/02 17:01:30 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/03 09:00:31 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	phonebook::FindContact()
 		{
 			int num = stoi(line) - 1;
 			// std::cout << num << std::endl;
-			if (num < 10 && num > -1)
+			if (num < this->_contact_num && num > -1)
 			{
 				std::cout << BBLU << std::endl << this->_contact_list[num].GetFirstName() << std::endl;
 				std::cout << this->_contact_list[num].GetLastName() << std::endl;
