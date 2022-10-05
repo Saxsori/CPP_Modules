@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:56:10 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/04 14:24:17 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/05 20:57:33 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ class Weapon
 		Weapon();
 		Weapon(std::string name);
 		~Weapon();
-		void		setType(std::string name);
-		std::string	const &getType() const;
+		void				setType(std::string name);
+		std::string	const	&getType() const;
 		
 };
 

@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+         #
+#    By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/04 17:14:21 by aaljaber          #+#    #+#              #
-#    Updated: 2022/10/05 00:51:39 by aaljaber         ###   ########.fr        #
+#    Updated: 2022/10/05 17:17:52 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp ErrMng.cpp StrReplace.cpp
+SRC = main.cpp ErrMng.cpp
 
 OBJ = ${SRC:.cpp=.o}
 

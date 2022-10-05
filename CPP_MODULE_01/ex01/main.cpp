@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 21:21:59 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/02 21:31:56 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/05 20:53:30 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,5 @@ int main ()
 		std::cout << "Zombie num." << i << std::endl;
 		Zombies[i].announce();
 	}
+	delete [] Zombies;
 }

@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 21:21:16 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/02 21:26:07 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/05 20:51:10 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,7 @@ void	Zombie::SetName(std::string name)
 
 Zombie::Zombie(){}
 
-Zombie::~Zombie(){}
+Zombie::~Zombie()
+{
+	std::cout << "Destructor called : " << this->_name << std::endl;
+}

@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 21:36:13 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/05 00:42:42 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/05 19:51:38 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,15 +37,6 @@ std::string ErrMng::fileName(std::string name)
 {
 	return(name + ".replace");	
 }
-
-// int	ErrMng::isFile(std::ifstream read)
-// {
-// 	if (read.is_open())
-// 		return(1);
-// 	else
-// 		std::cout << BRED << "file doesn't exist" << DEFCOLO << std::endl;
-// 	return (0);
-// }
 
 ErrMng::ErrMng(){}
 
