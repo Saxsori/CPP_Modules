@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 21:32:52 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/05 15:55:48 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/05 17:03:37 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,6 @@ class StrReplace
 		void		takeStarter(std::string line, std::string s1, std::string s2);
 		std::string replaceString(std::string line, std::string s1, std::string s2);
 };
-
-
 
 
 #endif

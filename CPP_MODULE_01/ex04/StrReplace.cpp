@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 21:34:31 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/05 16:30:46 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/05 17:06:07 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,22 +53,19 @@ std::string StrReplace::getNewLine()
 	// char str1[] = "boo";
 std::string StrReplace::replaceString(std::string line, std::string s1, std::string s2)
 {
-	line = "ppboolalaboobooboolllbooboommboonboobooboonnboonboo";
 	std::string SubStr;
-	std::string str = "boo";
-	s2 = "ABU";
-	char str1[] = "boo";
+	char *str1 = strcpy(str1, s1.c_str());
 	int	begin;
 	size_t	pos;
+
 	begin = 0;
 	int length = 0;
-	
 	// ? find the first s1 
-	if (line.find(str) == 0)
+	if (line.find(s1) == 0)
 	{
-		pos = line.find(str);
-		std::cout << pos + str.size() << std::endl;
-		begin = line.find(str) + str.size();
+		pos = line.find(s1);
+		std::cout << pos + s1.size() << std::endl;
+		begin = line.find(s1) + s1.size();
 		length = begin - pos;
 		SubStr = line.substr(begin, length + 1);
 		this->_new_line = s2;
@@ -78,7 +75,7 @@ std::string StrReplace::replaceString(std::string line, std::string s1, std::str
 	}
 	else
 	{
-		pos = line.find(str);
+		pos = line.find(s1);
 		SubStr = line.substr(0, pos);
 		this->_new_line = SubStr;
 		this->_new_line += s2;
@@ -86,15 +83,15 @@ std::string StrReplace::replaceString(std::string line, std::string s1, std::str
 		std::cout << SubStr << std::endl;
 	}
 	int i = 0;
-	int first = line.find(str);
-	pos = line.find(str);
+	int first = line.find(s1);
+	pos = line.find(s1);
 	if (pos != std::string::npos)
 	{
 		while (pos < line.size())
 		{
 			// ? getting the pos of s1
 			pos = line.find(str1, pos + 1);
-			begin = pos + str.size();
+			begin = pos + s1.size();
 	
 			// ?to skip the repeated str
 			if (pos == std::string::npos || pos == first)
@@ -111,7 +108,7 @@ std::string StrReplace::replaceString(std::string line, std::string s1, std::str
 				if (line.find(str1, pos + 1) == begin)
 				{
 					pos = line.find(str1, pos + 1);
-					begin = pos + str.size();
+					begin = pos + s1.size();
 				}
 				else
 					break ;

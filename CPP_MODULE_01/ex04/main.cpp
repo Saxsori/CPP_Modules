@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 17:15:02 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/05 15:11:42 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/05 17:14:56 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,7 @@ int main (int ac, char **ag)
 					if (line.empty())
 						break ;
 					std::cout << "what is in the file --> " << BRED << line << DEFCOLO << std::endl;
-					new_line = str_tool.replaceString(line, ag[2], ag[3]);
+					new_line = str_tool.replaceString("ppboolalaboobooboolllbooboommboonboobooboonnboo", "boo", "ABU");
 					std::cout << "new line --> " << BRED << new_line << DEFCOLO << std::endl;
 					
 				}
@@ -142,5 +142,4 @@ int main (int ac, char **ag)
 				std::cout << BRED << "file doesn't exist" << DEFCOLO << std::endl;
 		}	
 	}
-	
 }
