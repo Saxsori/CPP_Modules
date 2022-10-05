@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 22:00:53 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/02 22:06:55 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/04 16:41:55 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,18 @@ int main()
 
 	std::cout << "The memory address of the string variable --> " << &string << std::endl;
 	std::cout << "The memory address held by stringPTR --> " << stringPTR << std::endl;
-	std::cout << "The memory address held by stringPTR --> " << &stringREF << std::endl;
+	std::cout << "The memory address held by stringREF --> " << &stringREF << std::endl;
 	std::cout << "The value of the string variable --> " << string << std::endl;
 	std::cout << "The value pointed to by stringPTR --> " << *stringPTR << std::endl;
 	std::cout << "• The value pointed to by stringREF --> " << stringREF << std::endl;
-}
+	
+	std::cout << std::endl << "Some extra manipulation with stringREF and string itself" << std::endl;
+	std::cout << "Changing the value of stringREF" << std::endl;
+	stringREF = "HI";
+	std::cout << "stringREF --> " << stringREF << std::endl;
+	std::cout << "string --> " << string << std::endl;
+	std::cout << "Changing the value of string" << std::endl;
+	string = "BOO";
+	std::cout << "stringREF --> " << stringREF << std::endl;
+	std::cout << "string --> " << string << std::endl;
+}	

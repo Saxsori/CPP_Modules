@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 15:45:47 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/03 09:00:31 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/04 15:50:48 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ void	phonebook::FindContact()
 	std::getline(std::cin, line);
 	if (std::cin.eof())
 		exit(0);
+	if (line.empty())
+		std::cout << BMAG << "Invalid index" << DEFCOLO << std::endl;
 	else
 	{
 		if (this->isNumeric(line))
