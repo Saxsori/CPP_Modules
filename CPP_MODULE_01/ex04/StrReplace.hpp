@@ -3,26 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   StrReplace.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 21:32:52 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/05 00:47:05 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/05 15:55:48 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef STRREPLACE_HPP
 #define STRREPLACE_HPP
-
+# define BRED "\e[1;31m"
+# define DEFCOLO "\033[0m"
 #include <iostream>
 
 class StrReplace
 {
 	private:
-		/* data */
+		std::string _new_line;
 	public:
+		std::string getNewLine();
 		StrReplace();
 		~StrReplace();
-		std::string replaceString();
+		void		takeStarter(std::string line, std::string s1, std::string s2);
+		std::string replaceString(std::string line, std::string s1, std::string s2);
 };
 
 

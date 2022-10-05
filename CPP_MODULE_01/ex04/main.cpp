@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 17:15:02 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/05 00:52:10 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/05 15:11:42 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,9 +113,10 @@
 
 int main (int ac, char **ag)
 {
-	StrReplace str_tool;
-	ErrMng errMng;
+	StrReplace	str_tool;
+	ErrMng		errMng;
 	std::string line;
+	std::string	new_line;
 
 	if (errMng.ArgNumCheck(ac))
 	{
@@ -131,6 +132,9 @@ int main (int ac, char **ag)
 					if (line.empty())
 						break ;
 					std::cout << "what is in the file --> " << BRED << line << DEFCOLO << std::endl;
+					new_line = str_tool.replaceString(line, ag[2], ag[3]);
+					std::cout << "new line --> " << BRED << new_line << DEFCOLO << std::endl;
+					
 				}
 				read.close();
 			}
@@ -139,5 +143,4 @@ int main (int ac, char **ag)
 		}	
 	}
 	
-	str_tool.replaceString();
 }
