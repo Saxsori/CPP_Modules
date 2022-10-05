@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 21:45:29 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/04 23:28:18 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/05 02:27:33 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void Harl::error(void)
 
 void Harl::complain(std::string level)
 {
+	// (this->*(HARL_FUNC_ARRAY[0]))();
 	for (int i = 0; i < FUNC_NUM; i++)	
 	{
 		if (level == HARL_FUNC_NAME[i])

@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 21:34:31 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/05 00:53:49 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/05 02:01:27 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ std::string StrReplace::replaceString()
 {
 	
 	std::string line;
-	line = "ppboolalabooboolllbooboommboonboonn";
+	line = "ppboolalaboobooboolllbooboommboonboobooboonnboo";
 // 	// line = "hh";
 	std::string new_line;
 	std::string str = "boo";
@@ -50,10 +50,15 @@ std::string StrReplace::replaceString()
 			end = line.find(str1, end + 1);
 			begin = end + str.size();
 			// to skip the repeated str
-			if (line.find(str1, end + 1) == begin)
+			while (1)
 			{
-				end = line.find(str1, end + 1);
-				begin = end + str.size();
+				if (line.find(str1, end + 1) == begin)
+				{
+					end = line.find(str1, end + 1);
+					begin = end + str.size();
+				}
+				else
+					break ;
 			}
 			std::cout << "end " << end << std::endl;
 			// if there is no extra str
@@ -67,6 +72,8 @@ std::string StrReplace::replaceString()
 				length = line.find(str1, begin + 1) - begin;
 			else
 				length = line.size() - begin;
+			if (length == 0)
+				break;
 			std::cout << "where str found " << end << " next line " << begin << /*" " << line.find(str1, begin + 1) - begin <<*/ std::endl;
 			std::cout << "length " << length << " " << line.substr(begin, length) << std::endl;
 		}
