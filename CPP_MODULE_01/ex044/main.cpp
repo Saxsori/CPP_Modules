@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:14:22 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/05 18:54:58 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/05 20:08:23 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,27 @@
 std::string replaceString(std::string line, std::string s1, std::string s2)
 {
 	std::string newline = line;
+	std::cout << "-->" << newline << std::endl;
 	int	found = line.find(s1);
-	std::cout << found << std::endl;
+	std::cout << "pos " << found << std::endl;
 	newline.erase(found, s1.size());
 	newline.insert(found, s2);
 	found = line.find(s1);
-	std::cout << "-->" << newline << std::endl;
+	int first = found;
+	int i = 0;
 	while (1)
 	{
+		std::cout << "pos " << found << std::endl;
+		std::cout << found - (i++) << std::endl;
 		found = line.find(s1, found + 1);
-		if (found == std::string::npos)
+		if (found == std::string::npos || found == first)
 			break ;
-		found += (s2.size() - found);
-		std::cout << found << std::endl;
-		newline.erase(found, s1.size());
-		newline.insert(found, s2);
+		// found++;
+		// newline.erase(found, s1.size());
+		// newline.insert(found, s2);
+		// std::cout << "-->" << newline << std::endl;
+		// found += (found - s2.size());
 	}
-	std::cout << "-->" << newline << std::endl;
 	return (newline);
 }
 
@@ -57,9 +61,9 @@ int main (int ac, char **ag)
 	// 				if (line.empty())
 	// 					break ;
 	// 				std::cout << "what is in the file --> " << BRED << line << DEFCOLO << std::endl;
-					new_line = replaceString("andandh", "and", "andy");
-					new_line = replaceString("booboon", "boo", "boom");
-					// new_line = replaceString("booboolalaboobooboolllbooboommboonboobooboonnboo", "boo", "booC");
+					// new_line = replaceString("andandh", "and", "andy");
+					// new_line = replaceString("booboon", "boo", "boom");
+					new_line = replaceString("booboolalaboobooboolllbooboommboonboobooboonnboo", "boo", "bo");
 					// std::cout << "new line --> " << BRED << new_line << DEFCOLO << std::endl;
 	// 			}
 	// 			read.close();
