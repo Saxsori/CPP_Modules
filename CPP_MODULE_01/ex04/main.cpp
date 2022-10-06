@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:14:22 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/05 20:24:50 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/06 11:40:44 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ std::string replaceString(std::string line, std::string s1, std::string s2)
 		std::cout << "pos " << index << std::endl;
 		newline.erase(index, s1.length());
 		newline.insert(index, s2);
-		found = line.find(s1, found + 1);
+		found = line.find(s1, found + s2.length());
 		if (found == std::string::npos || found == first)
 			break ;
 		i = i + diff;
@@ -62,23 +62,24 @@ int main (int ac, char **ag)
 	{
 		if (errMng.isArg(ag[1], ag[2], ag[3]))
 		{
+			std::fstream per(ag[1]);
 			std::ifstream read(ag[1]);
-			if (read.is_open())
+			if (per.is_open() && read.is_open())
 			{
-				if ((read.rdstate() & std::ifstream::failbit ) == 0)
+				if ((per.rdstate() & std::ifstream::failbit) == 0)
 				{
-					std::cout << "fail " << read.failbit << " bad " << read.badbit << " good " << read.goodbit << std::endl; 
 					std::ofstream write(errMng.fileName(ag[1]), std::ios::app);
 					while (read.good())
 					{
-						std::getline(read, line);
+						std::cout << std::getline(read, line) << std::endl;
 						if (line.empty())
 							break ;
 						new_line = replaceString(line, ag[2], ag[3]);
-						write << new_line;
+						write << new_line << std::endl;
 						std::cout << "new line --> " << BRED << new_line << DEFCOLO << std::endl;
 					}
 					read.close();
+					per.close();
 				}
 				else
 					std::cout << BRED << "file isn't readable or empty" << DEFCOLO << std::endl;
