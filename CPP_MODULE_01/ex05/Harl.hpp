@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 21:45:34 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/05 02:27:35 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/06 15:18:41 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class Harl
 		void error(void);
 		void nothing(void);
 	public:
-		void (Harl::*HARL_FUNC_ARRAY[5]) (void) = {&Harl::error, &Harl::warning, &Harl::debug, &Harl::info};
+		// void (Harl::*HARL_FUNC_ARRAY[5]) (void) = {&Harl::error, &Harl::warning, &Harl::debug, &Harl::info};
 		void complain(std::string level);
 		Harl();
 		~Harl();

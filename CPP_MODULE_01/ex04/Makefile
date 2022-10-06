@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+         #
+#    By: aaljaber <aaljaber@student.42abudhabi.a    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/04 17:14:21 by aaljaber          #+#    #+#              #
-#    Updated: 2022/10/05 17:17:52 by aaljaber         ###   ########.fr        #
+#    Updated: 2022/10/06 18:42:45 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,5 +32,6 @@ clean :
 
 fclean : clean
 		${RM} ${NAME}
+		${RM} file.replace
  
 re : fclean all

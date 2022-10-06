@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 15:45:47 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/04 15:50:48 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/06 18:47:32 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ void	phonebook::FindContact()
 		if (this->isNumeric(line))
 		{
 			int num = stoi(line) - 1;
-			// std::cout << num << std::endl;
 			if (num < this->_contact_num && num > -1)
 			{
 				std::cout << BBLU << std::endl << this->_contact_list[num].GetFirstName() << std::endl;

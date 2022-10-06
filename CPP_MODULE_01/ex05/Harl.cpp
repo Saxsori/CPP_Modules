@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 21:45:29 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/05 02:27:33 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/06 15:18:33 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,12 +34,12 @@ void Harl::error(void)
 
 void Harl::complain(std::string level)
 {
-	// (this->*(HARL_FUNC_ARRAY[0]))();
+	void (Harl::*HARL_FUNC_ARRAY[5]) (void) = {&Harl::error, &Harl::warning, &Harl::debug, &Harl::info};
 	for (int i = 0; i < FUNC_NUM; i++)	
 	{
 		if (level == HARL_FUNC_NAME[i])
 		{
-			(this->*(Harl::HARL_FUNC_ARRAY[i]))();
+			(this->*(HARL_FUNC_ARRAY[i]))();
 			return ;
 		}
 	}

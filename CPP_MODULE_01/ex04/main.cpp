@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:14:22 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/06 11:40:44 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/06 18:42:02 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,12 @@ std::string replaceString(std::string line, std::string s1, std::string s2)
 	int first = found;
 	int i = 0;
 	int	diff = 0;
-
+	
+	if (found == -1)
+	{
+		std::cout << s1 << " is not found" << std::endl;
+		exit(1);
+	}
 	if (s1.length() > s2.length())
 		diff = (s1.length() - s2.length());
 	else if (s1.length() < s2.length() )
@@ -35,23 +40,33 @@ std::string replaceString(std::string line, std::string s1, std::string s2)
 			index = found - i;
 		else
 			index = found;
-		std::cout << "pos " << index << std::endl;
+		// std::cout << "pos " << index << std::endl;
 		newline.erase(index, s1.length());
 		newline.insert(index, s2);
-		found = line.find(s1, found + s2.length());
+		found = line.find(s1, found + (diff + 1));
 		if (found == std::string::npos || found == first)
 			break ;
 		i = i + diff;
+		// std::cout << BRED << "-->" << newline << DEFCOLO << std::endl;
 	}
-	std::cout << "-->" << newline << std::endl;
 	return (newline);
 }
 
+/*
 					// 	// std::cout << "what is in the file --> " << BRED << line << DEFCOLO << std::endl;
 					// 	// new_line = replaceString("andandh", "and", "andy");
 					// 	// new_line = replaceString("booboon", "boo", "boom");
 					// 	// new_line = replaceString("booboon", "boo", "boom");
 					// 	// new_line = replaceString("booboolalaboobooboolllbooboommboonboobooboonnboo", "boo", "ABUUU");
+? booboolalaboobooboolllbooboomnmboonboobooboonnboo    boo bo
+? booboolalaboobooboolllbooboomnmboonboobooboonnboo    boo booA
+? booboolalaboobooboolllbooboomnmboonboobooboonnboo    boo BOO
+? booboolalaboobooboolllbooboomnmboonboobooboonnboo    boo N
+? bbbbbbooo    bb bbb
+? bbbooo    b bb
+? testsdhjg loooooolhhhh  l k
+? testsdhjg loooooolhhhh  k l
+*/
 int main (int ac, char **ag)
 {
 	ErrMng		errMng;
@@ -71,12 +86,12 @@ int main (int ac, char **ag)
 					std::ofstream write(errMng.fileName(ag[1]), std::ios::app);
 					while (read.good())
 					{
-						std::cout << std::getline(read, line) << std::endl;
+						std::getline(read, line);
 						if (line.empty())
 							break ;
 						new_line = replaceString(line, ag[2], ag[3]);
 						write << new_line << std::endl;
-						std::cout << "new line --> " << BRED << new_line << DEFCOLO << std::endl;
+						// std::cout << "new line --> " << BRED << new_line << DEFCOLO << std::endl;
 					}
 					read.close();
 					per.close();

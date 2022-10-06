@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:27:29 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/02 21:28:49 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/06 14:47:36 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 // 	return (Zombie2);
 // }
 
-Zombie*	Zombie::newZombie(std::string name)
+Zombie*	newZombie(std::string name)
 {
 	Zombie	*Zombie2 = new (Zombie);
 

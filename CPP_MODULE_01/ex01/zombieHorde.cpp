@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 21:21:08 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/05 20:44:59 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/06 14:49:34 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie* Zombie::zombieHorde(int N, std::string name)
+Zombie* zombieHorde(int N, std::string name)
 {
 	Zombie	*Zombie2 = NULL;
 	if (N > 0)

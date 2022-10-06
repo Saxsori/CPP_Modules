@@ -1,7 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/abrar/Desktop/42-Devcontainer/42-Devcontainer/src/Cursus/CPP_MODULE/CPP_MODULE_01/ex04'
-c++    -c -o main.o main.cpp
-c++    -c -o ErrMng.o ErrMng.cpp
-c++ -Wall -Werror -Wextra -std=c++98 main.o ErrMng.o -o Sed_is_for_losers
-make: Leaving directory `/Users/abrar/Desktop/42-Devcontainer/42-Devcontainer/src/Cursus/CPP_MODULE/CPP_MODULE_01/ex04'
- 

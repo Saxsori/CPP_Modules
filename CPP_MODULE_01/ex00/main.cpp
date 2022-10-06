@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 20:27:14 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/05 20:49:42 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/06 18:43:56 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@ int main ()
 {
 	Zombie *Zombie1;
 
-	Zombie1 = Zombie1->newZombie("Sasori");
+	Zombie1 = newZombie("Sasori");
 	Zombie1->announce();
 	delete (Zombie1);
-	Zombie Zombie2;
-	Zombie2.randomChump("Abrar");
+	randomChump("Abrar");
 }
