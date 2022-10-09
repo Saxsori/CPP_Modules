@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 03:20:03 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/09 21:49:21 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/09 22:52:40 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ Fixed::Fixed(void)
 //! int and float constructor
 Fixed::Fixed(const int num)
 {
-	this->_num = num * (1 << this->_FractionalBits);	
+	this->_num = num * (1 << this->_FractionalBits);
 }
 
 /*
