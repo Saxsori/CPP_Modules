@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 03:20:03 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/09 17:03:50 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/09 21:16:06 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,6 @@ Fixed::Fixed(const Fixed &obj)
 	*this = obj;
 }
 
-Fixed::~Fixed(void)
-{
-	std::cout << BPUR << "Destructor called" << DEFCOLO << std::endl;
-}
-
 void Fixed::setRawBits(int const raw)
 {
 	this->_num = raw;
@@ -54,4 +49,9 @@ int		Fixed::getRawBits() const
 {
 	std::cout << BGRN << "getRawBits member function called" << DEFCOLO << std::endl;
 	return (this->_num);
+}
+
+Fixed::~Fixed(void)
+{
+	std::cout << BPUR << "Destructor called" << DEFCOLO << std::endl;
 }
