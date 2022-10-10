@@ -6,14 +6,15 @@
 /*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:33:49 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 18:42:08 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 19:16:36 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
 
-Animal::Animal():_type("")
+Animal::Animal()
 {
+	this->_type = "Animal";
 	std::cout << BCYN << "Animal Default Constructor called" << DEFCOLO << std::endl;
 }
 
