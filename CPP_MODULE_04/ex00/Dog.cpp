@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:35:13 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 05:58:01 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 17:31:49 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ Dog &Dog::operator = (Dog const &obj)
 	return (*this);
 }
 
-Dog::~Dog()
+Dog::~Dog(void)
 {
 	std::cout << BBLU << "Dog Destructor called" << DEFCOLO << std::endl;
 }

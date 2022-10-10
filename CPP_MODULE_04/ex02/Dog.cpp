@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:35:13 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 05:11:08 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:09:54 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,8 @@
 
 Dog::Dog():Animal()
 {
+	this->_type = "Dog";
 	std::cout << BBLU << "Dog Default Constructor called" << DEFCOLO << std::endl;
-}
-
-Dog::Dog(std::string type)
-{
-	this->_type = type;
-	this->_brain = new (Brain);
-	std::cout << BCYN << "Dog Constructor called" << DEFCOLO << std::endl;
 }
 
 /*

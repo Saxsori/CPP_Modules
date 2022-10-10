@@ -3,26 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:34:36 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 05:11:03 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:07:06 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 #include "Brain.hpp"
 
-Cat::Cat():Animal()
+Cat::Cat()
 {
+	this->_type = "Cat";
 	std::cout << BBLU << "Cat Default Constructor called" << DEFCOLO << std::endl;
-}
-
-Cat::Cat(std::string type)
-{
-	this->_type = type;
-	this->_brain = new (Brain);
-	std::cout << BCYN << "Cat Constructor called" << DEFCOLO << std::endl;
 }
 
 /*

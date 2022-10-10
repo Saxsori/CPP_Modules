@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+         #
+#    By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/10 01:40:05 by aaljaber          #+#    #+#              #
-#    Updated: 2022/10/10 05:15:06 by aaljaber         ###   ########.fr        #
+#    Updated: 2022/10/10 16:59:34 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongCat.cpp WrongAnimal.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
-NAME = Now_we_are_talking
+NAME = Polymorphism
 
 CC = c++
 

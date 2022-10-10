@@ -3,24 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:36:25 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 01:37:11 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 17:14:44 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongCat.hpp"
 
-WorngCat::WorngCat():WrongAnimal()
+WorngCat::WorngCat()
 {
-	std::cout << BBLU << "WorngCat Default Constructor called" << DEFCOLO << std::endl;
-}
-
-WorngCat::WorngCat(std::string type)
-{
-	this->_type = type;
-	std::cout << BCYN << "WorngCat Constructor called" << DEFCOLO << std::endl;
+	this->_type = "Wrong Cat";
+	std::cout << BCYN << "WorngCat Default Constructor called" << DEFCOLO << std::endl;
 }
 
 /*

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:21:13 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 05:58:58 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 17:33:06 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ class Dog:public Animal
 		Dog(const Dog &obj);
 		Dog &operator = (Dog const &obj);
 		void makeSound(void)const;
-		~Dog();
+		~Dog(void);
 };
 
 #endif

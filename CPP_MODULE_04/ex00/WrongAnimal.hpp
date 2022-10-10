@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:26:06 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 01:29:33 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 17:12:26 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 #include <iostream>
 # define BBLK "\e[1;30m"
 # define BRED "\e[1;31m"
@@ -30,8 +30,8 @@ class WrongAnimal
 		std::string _type;
 	public:
 		WrongAnimal();
-		WrongAnimal(std::string type);
 		WrongAnimal(const WrongAnimal &obj);
+		std::string	getType(void)const;
 		WrongAnimal &operator = (WrongAnimal const &obj);
 		void makeSound(void)const;
 		~WrongAnimal();

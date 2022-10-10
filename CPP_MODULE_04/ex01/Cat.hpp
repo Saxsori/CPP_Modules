@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:07:27 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 05:10:39 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 11:06:41 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ class Cat:public Animal
 	Brain	*_brain;
 	public:
 		Cat();
-		Cat(std::string type);
 		Cat(const Cat &obj);
 		Cat &operator = (Cat const &obj);
 		void makeSound(void)const;

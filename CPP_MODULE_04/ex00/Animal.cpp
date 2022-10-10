@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:33:49 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 05:55:47 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 17:29:20 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 Animal::Animal()
 {
+	this->_type = "Animal";
 	std::cout << BCYN << "Animal Default Constructor called" << DEFCOLO << std::endl;
 }
 

@@ -3,23 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:29:42 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 01:29:56 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 17:13:28 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "WrongAnimal.hpp"
 
-WrongAnimal::WrongAnimal():_type("")
+WrongAnimal::WrongAnimal()
 {
+	this->_type = "BLABLA";
 	std::cout << BBLU << "WrongAnimal Default Constructor called" << DEFCOLO << std::endl;
 }
 
-WrongAnimal::WrongAnimal(std::string type):_type(type)
+std::string	WrongAnimal::getType(void)const
 {
-	std::cout << BCYN << "WrongAnimal Constructor called" << DEFCOLO << std::endl;
+	return (this->_type);
 }
 
 /*

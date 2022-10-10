@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WorngCat.hpp                                       :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:23:10 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 01:36:22 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 17:07:02 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ class WorngCat:public WrongAnimal
 {
 	public:
 		WorngCat();
-		WorngCat(std::string type);
 		WorngCat(const WorngCat &obj);
 		WorngCat &operator = (WorngCat const &obj);
 		void makeSound(void)const;
