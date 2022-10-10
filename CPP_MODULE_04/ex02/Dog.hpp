@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:21:13 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 05:10:28 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 18:54:53 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ class Dog:public Animal
 		Brain	*_brain;
 	public:
 		Dog();
-		Dog(std::string type);
 		Dog(const Dog &obj);
 		Dog &operator = (Dog const &obj);
 		void makeSound(void)const;

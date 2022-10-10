@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:34:36 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 11:07:06 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 18:20:51 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 Cat::Cat()
 {
 	this->_type = "Cat";
+	this->_brain = new Brain;
 	std::cout << BBLU << "Cat Default Constructor called" << DEFCOLO << std::endl;
 }
 
@@ -40,7 +41,11 @@ void Cat::makeSound(void)const
 */
 Cat &Cat::operator = (Cat const &obj)
 {
-	this->_type = obj._type;
+	if (this != &obj)
+	{
+		this->_type = obj._type;
+		*this->_brain = *obj._brain;
+	}
 	return (*this);
 }
 

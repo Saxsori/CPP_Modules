@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:35:13 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 17:31:49 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 18:25:48 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Dog::Dog(const Dog &obj)
 
 void Dog::makeSound(void)const
 {
-	std::cout << BYEL << "*** BARK 🐶! ***"	<< DEFCOLO << std::endl;
+	std::cout << BYEL << "*** Woof 🐶! ***"	<< DEFCOLO << std::endl;
 }
 
 /*
@@ -46,5 +46,5 @@ Dog &Dog::operator = (Dog const &obj)
 
 Dog::~Dog(void)
 {
-	std::cout << BBLU << "Dog Destructor called" << DEFCOLO << std::endl;
+	std::cout << BCYN << "Dog Destructor called" << DEFCOLO << std::endl;
 }

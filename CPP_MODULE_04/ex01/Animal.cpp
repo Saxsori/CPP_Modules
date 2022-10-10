@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:33:49 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 01:33:59 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 18:03:22 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,5 @@ Animal &Animal::operator = (Animal const &obj)
 
 Animal::~Animal()
 {
-	std::cout << BBLU << "Animal Destructor called" << DEFCOLO << std::endl;
+	std::cout << BCYN << "Animal Destructor called" << DEFCOLO << std::endl;
 }

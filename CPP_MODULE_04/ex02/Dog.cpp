@@ -6,16 +6,17 @@
 /*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:35:13 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 11:09:54 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 18:55:09 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
 
-Dog::Dog():Animal()
+Dog::Dog()
 {
 	this->_type = "Dog";
+	this->_brain = new Brain();
 	std::cout << BBLU << "Dog Default Constructor called" << DEFCOLO << std::endl;
 }
 
@@ -31,7 +32,7 @@ Dog::Dog(const Dog &obj)
 
 void Dog::makeSound(void)const
 {
-	std::cout << BYEL << "*** BARK 🐶! ***"	<< DEFCOLO << std::endl;
+	std::cout << BYEL << "*** Woof 🐶! ***"	<< DEFCOLO << std::endl;
 }
 
 /*
@@ -40,7 +41,11 @@ void Dog::makeSound(void)const
 */
 Dog &Dog::operator = (Dog const &obj)
 {
-	this->_type = obj._type;
+	if (this != &obj)
+	{
+		this->_type = obj._type;
+		*this->_brain = *obj._brain;
+	}
 	return (*this);
 }
 

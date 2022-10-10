@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:47:23 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 01:51:27 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 18:45:28 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Brain::Brain()
 {
-	std::cout << BBLU << "Brain Default Constructor called" << DEFCOLO << std::endl;
+	std::cout << BMAG << "Brain Default Constructor called" << DEFCOLO << std::endl;
 }
 
 /*
@@ -33,6 +33,7 @@ Brain::Brain(const Brain &obj)
 */
 Brain &Brain::operator = (Brain const &obj)
 {
+	std::cout << BPUR << "Brain copy Assignment operator called" << DEFCOLO << std::endl;
 	int i = -1;
 	while (++i < 100)
 		this->ideas[i] = obj.ideas[i];
@@ -41,5 +42,5 @@ Brain &Brain::operator = (Brain const &obj)
 
 Brain::~Brain()
 {
-	std::cout << BBLU << "Brain Destructor called" << DEFCOLO << std::endl;
+	std::cout << BMAG << "Brain Destructor called" << DEFCOLO << std::endl;
 }
