@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:07:27 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 01:33:47 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 18:02:57 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ class Animal
 		Animal(const Animal &obj);
 		Animal &operator = (Animal const &obj);
 		virtual void makeSound(void)const;
-		~Animal();
+		virtual ~Animal();
 };
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:34:36 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 05:56:40 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 18:01:38 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,5 +45,5 @@ Cat &Cat::operator = (Cat const &obj)
 
 Cat::~Cat()
 {
-	std::cout << BBLU << "Cat Destructor called" << DEFCOLO << std::endl;
+	std::cout << BCYN << "Cat Destructor called" << DEFCOLO << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 01:07:27 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/10 17:40:48 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/10 18:00:07 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ class Animal
 		std::string	getType(void)const;
 		Animal &operator = (Animal const &obj);
 		virtual void makeSound(void)const;
-		~Animal();
+		virtual ~Animal();
 };
 
 #endif
