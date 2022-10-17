@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 23:36:39 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/13 20:21:22 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/17 04:11:48 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ Form::Form(const Form &obj):_name(obj._name), _gradeEX(obj._gradeEX), _gradeSI(o
 
 Form &Form::operator = (Form const &obj)
 {
+	const_cast<std::string&>(this->_name) = obj._name;
+	const_cast<int&>(this->_gradeEX) = obj._gradeEX;
+	const_cast<int&>(this->_gradeSI) = obj._gradeSI;
 	this->_isSigned = obj._isSigned;
 	return (*this);
 }
@@ -43,12 +46,17 @@ const char* Form::GradeTooLowException::what() const throw()
 	return (BRED"The Grade is too Low !");
 }
 
-bool	Form::getSign()
+const char* Form::FornNotSigned::what() const throw()
+{
+	return (BRED"Form is not Signed !");
+}
+
+bool	Form::getSign() const
 {
 	return (this->_isSigned);
 }
 
-const std::string	Form::getName()
+const std::string	Form::getName() const
 {
 	return (this->_name);
 }
@@ -68,8 +76,10 @@ void	Form::beSigned(Bureaucrat &BUR)
 	if (BUR.getGrade() <= this->getGradeSI())
 		this->_isSigned = true;
 	else
-		throw Form::GradeTooHighException();
+		throw Form::GradeTooLowException();
 }
+
+
 
 std::ostream &operator << (std::ostream &COUT, Form &obj)
 {

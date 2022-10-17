@@ -6,13 +6,11 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 23:36:39 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/13 02:03:08 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/17 01:41:37 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
-
-// Form::Form(){}
 
 Form::Form(std::string name, const int gradeEx, const int gradeSI):_name(name), _gradeEX(gradeEx), _gradeSI(gradeSI), _isSigned(false)
 {
@@ -30,6 +28,9 @@ Form::Form(const Form &obj):_name(obj._name), _gradeEX(obj._gradeEX), _gradeSI(o
 Form &Form::operator = (Form const &obj)
 {
 	this->_isSigned = obj._isSigned;
+	const_cast<std::string&>(this->_name) = obj._name;
+	const_cast<int&>(this->_gradeEX) = obj._gradeEX;
+	const_cast<int&>(this->_gradeSI) = obj._gradeSI;
 	return (*this);
 }
 
@@ -68,12 +69,12 @@ void	Form::beSigned(Bureaucrat &BUR)
 	if (BUR.getGrade() <= this->getGradeSI())
 		this->_isSigned = true;
 	else
-		throw Form::GradeTooHighException();
+		throw Form::GradeTooLowException();
 }
 
 std::ostream &operator << (std::ostream &COUT, Form &obj)
 {
-	COUT << BYEL << "Name: " << obj.getName() << ", Grade to Signe: " << obj.getGradeSI() << ", Grade to Execute: " << obj.getGradeEX() << ", Sign Status: " << obj.getSign() << DEFCOLO << std::endl;
+	COUT << BYEL << "Form Name: " << obj.getName() << ", Grade to Sign: " << obj.getGradeSI() << ", Grade to Execute: " << obj.getGradeEX() << ", Sign Status: " << obj.getSign() << DEFCOLO << std::endl;
 	return (COUT);
 }
 

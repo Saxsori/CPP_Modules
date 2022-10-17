@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 21:23:31 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/13 23:55:37 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/17 04:37:45 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,25 @@ class PresidentialPardonForm : public Form
 		void		execute(Bureaucrat const & executor) const;
 };
 
-PresidentialPardonForm::PresidentialPardonForm():_target(""), Form("", 5, 25){}
+PresidentialPardonForm::PresidentialPardonForm():Form("", 5, 25), _target(""){}
 
 PresidentialPardonForm &PresidentialPardonForm::operator = (PresidentialPardonForm const &obj)
 {
 	this->_target = obj._target;
+	return (*this);
 }
 
-PresidentialPardonForm::PresidentialPardonForm(std::string target):_target(target), Form(target, 5, 25){}
+PresidentialPardonForm::PresidentialPardonForm(std::string target):Form(target, 5, 25), _target(target){}
 
 PresidentialPardonForm::~PresidentialPardonForm(){}
 
 void		PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
+	if (!this->getSign())
+		throw (PresidentialPardonForm::FornNotSigned());
+	if (executor.getGrade() >= this->getGradeEX())
+		throw (PresidentialPardonForm::GradeTooLowException());
+	std::cout << BCYN << this->_target << "has been pardoned by Zaphod Beeblebrox" << std::endl;
 	// form is signed 
 	// grade of the bureaucrat attempting to execute the form is high enough.
 	// Otherwise, throw an appropriate exception.

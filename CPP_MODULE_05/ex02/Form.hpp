@@ -30,8 +30,8 @@ class Form
 		Form(const Form &obj);
 		Form &operator = (Form const &obj);
 		virtual ~Form();
-		const std::string	getName();
-		bool				getSign();
+		const std::string	getName() const;
+		bool				getSign() const;
 		int					getGradeEX()const;
 		int					getGradeSI()const;
 		void				beSigned(Bureaucrat &BUR);
@@ -42,6 +42,11 @@ class Form
 				const char* what() const throw();
 		};
 		class GradeTooLowException : public std::exception
+		{
+			public:
+				const char* what() const throw();
+		};
+		class FornNotSigned : public std::exception
 		{
 			public:
 				const char* what() const throw();

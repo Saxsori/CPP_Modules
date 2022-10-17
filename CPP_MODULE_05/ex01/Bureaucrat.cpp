@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 23:35:50 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/13 02:03:02 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/17 01:29:49 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ Bureaucrat::Bureaucrat(const Bureaucrat &obj):_name(obj._name)
 Bureaucrat &Bureaucrat::operator = (Bureaucrat const &obj)
 {
 	this->_grade = obj._grade;
+	const_cast<std::string&>(this->_name) = obj._name;
 	return (*this);
 }
 

@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 23:23:07 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/13 23:54:03 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/17 03:40:06 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ class Bureaucrat
 		Bureaucrat &operator = (Bureaucrat const &obj);
 		Bureaucrat(const Bureaucrat &obj);
 		const std::string	getName();
-		int					getGrade();
+		int					getGrade() const;
 		void				increaseGrade();
 		void				decreaseGrade();
 		void				signForm(Form &FOR);
