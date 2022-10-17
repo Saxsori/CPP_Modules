@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 23:57:40 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/14 00:22:26 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/17 09:19:55 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,21 +28,30 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
-#define FORM_FUNC_NAME (std::string[]){"Shrubbery Creation", "Robotomy Request", "Presidential Pardon"}
+#define FORM_FUNC_NAME (std::string[]){"shrubbery creation", "robotomy request", "presidential pardon"}
 #define FORM_NUM 3
 
 class Intern
 {
-private:
-	/* data */
-public:
-	Intern(/* args */);
-	~Intern();
-	Form *makeForm(std::string FormName, std::string target);
+	private:
+		/* data */
+	public:
+		Intern();
+		~Intern();
+		Form *makeForm(std::string FormName, std::string target);
+		class FormNotExist : public std::exception
+		{
+			public:
+				const char* what() const throw()
+				{
+					return (BRED"Form Doesn't Exist");
+				}
+		};
+		
 };
 
 
-Intern::Intern(/* args */){}
+Intern::Intern(){}
 
 Intern::~Intern(){}
 
@@ -73,10 +82,11 @@ Form *Intern::makeForm(std::string FormName, std::string target)
 		if (FormName == FORM_FUNC_NAME[i])
 		{
 			newForm = FORM_FUNC_ARRAY[i](target);
+			std::cout << BCYN << "Intern creates " << FormName << std::endl;
 			return (newForm);
 		}
 	}
-	return (NULL);
+	throw (Intern::FormNotExist());
 }
 
 

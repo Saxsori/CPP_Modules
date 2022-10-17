@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+         #
+#    By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/10 01:40:05 by aaljaber          #+#    #+#              #
-#    Updated: 2022/10/13 00:24:11 by aaljaber         ###   ########.fr        #
+#    Updated: 2022/10/17 09:09:18 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRC = main.cpp Bureaucrat.cpp Form.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
-NAME = Form_up_maggots!
+NAME = At_least_this_beats_coffee_making
 
 CXX = c++
 

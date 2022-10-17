@@ -1,4 +1,5 @@
 #include "Form.hpp"
+#include "Intern.hpp"
 #include "Bureaucrat.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "PresidentialPardonForm.hpp"
@@ -6,22 +7,36 @@
 
 int main ()
 {
-	Bureaucrat n ("lala", 42);
-	Form *Sh = new ShrubberyCreationForm("home");
-	n.signForm(*Sh);
-	n.executeForm(*Sh);
-	delete Sh;
+	std::cout << std::endl << BBLK << "*** TEST VALID FORM ***" << DEFCOLO << std::endl;
 
-	Bureaucrat b ("boo", 42);
-	Form *Rr = new RobotomyRequestForm("home");
-	b.signForm(*Rr);
-	b.executeForm(*Rr);
-	delete Rr;
+	try
+	{
+		Intern someRandomIntern;
+		Bureaucrat n ("lala", 14);
+		Form* rrf;
+		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+		n.signForm(*rrf);
+		n.executeForm(*rrf);
+	}
+	catch(std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
 
-	Bureaucrat a ("abrar", 42);
-	Form *Pp = new ShrubberyCreationForm("home");
-	a.signForm(*Pp);
-	a.executeForm(*Pp);
-	delete Sh;
+	std::cout << std::endl << BBLK << "*** TEST INVALID FORM ***" << DEFCOLO << std::endl;
+
+	try
+	{
+		Intern someRandomIntern;
+		Bureaucrat n ("lala", 14);
+		Form* rrf;
+		rrf = someRandomIntern.makeForm("Robotomy request", "Bender");
+		n.signForm(*rrf);
+		n.executeForm(*rrf);
+	}
+	catch(std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
 	
 }
