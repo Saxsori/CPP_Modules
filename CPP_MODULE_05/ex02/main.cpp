@@ -23,13 +23,13 @@ int main ()
 	Form *Pp = new PresidentialPardonForm("pardon");
 	a.signForm(*Pp);
 	a.executeForm(*Pp);
-	delete Sh;
+	delete Pp;
 
 	std::cout << BBLK << "*** TEST LOW EXECUTE GRADE ***" << DEFCOLO << std::endl;
 	Bureaucrat aa ("abrar", 42);
 	Form *test = new PresidentialPardonForm("pardon");
 	aa.signForm(*test);
 	aa.executeForm(*test);
-	delete Sh;
+	delete test;
 	
 }

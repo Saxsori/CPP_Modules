@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 23:35:50 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/17 04:43:39 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/17 12:13:58 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,13 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 	return (BRED"The Grade is too Low !");
 }
 
-Bureaucrat::Bureaucrat(std::string name, int grade): _name(name), _grade(grade)
+Bureaucrat::Bureaucrat(std::string name, int grade): _name(name)
 {
-	if (this->_grade < 1)
+	if (grade < 1)
 		throw Bureaucrat::GradeTooHighException();
-	else if (this->_grade > 150)
+	else if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
+	this->_grade = grade;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &obj):_name(obj._name)
@@ -90,6 +91,14 @@ void Bureaucrat::increaseGrade()
 	this->_grade--;
 }
 
+	//execute the form
+	/*
+	 	If it’s successful, print something like:
+				<bureaucrat> executed <form>
+		If not, print an explicit error message.
+
+		try & catch
+	*/
 void			Bureaucrat::executeForm(Form const & form)
 {
 	try
@@ -101,15 +110,6 @@ void			Bureaucrat::executeForm(Form const & form)
 	{
 		std::cerr << BYEL << this->getName() << " didn't execute " << form.getName() << " because -> " << e.what() << DEFCOLO << '\n';
 	}
-	
-	//execute the form
-	/*
-	 	If it’s successful, print something like:
-				<bureaucrat> executed <form>
-		If not, print an explicit error message.
-
-		try & catch
-	*/
 }
 
 

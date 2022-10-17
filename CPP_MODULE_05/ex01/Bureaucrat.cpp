@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 23:35:50 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/17 01:29:49 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/17 12:13:47 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,13 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
 	return (BRED"The Grade is too Low !");
 }
 
-Bureaucrat::Bureaucrat(std::string name, int grade): _name(name), _grade(grade)
+Bureaucrat::Bureaucrat(std::string name, int grade): _name(name)
 {
-	if (this->_grade < 1)
+	if (grade < 1)
 		throw Bureaucrat::GradeTooHighException();
-	else if (this->_grade > 150)
+	else if (grade > 150)
 		throw Bureaucrat::GradeTooLowException();
+	this->_grade = grade;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &obj):_name(obj._name)

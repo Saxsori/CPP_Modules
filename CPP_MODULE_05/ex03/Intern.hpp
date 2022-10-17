@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 23:57:40 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/17 09:19:55 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/17 15:44:32 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,61 +33,16 @@
 
 class Intern
 {
-	private:
-		/* data */
 	public:
 		Intern();
+		Intern(const Intern &obj);
+		Intern &operator = (Intern const &obj);
 		~Intern();
 		Form *makeForm(std::string FormName, std::string target);
-		class FormNotExist : public std::exception
-		{
-			public:
-				const char* what() const throw()
-				{
-					return (BRED"Form Doesn't Exist");
-				}
-		};
-		
+
 };
 
 
-Intern::Intern(){}
-
-Intern::~Intern(){}
-
-Form	*newShrubberyCreation(std::string target)
-{
-	Form *SC = new ShrubberyCreationForm(target);
-	return (SC);
-}
-
-Form	*newRobotomyRequest(std::string target)
-{
-	Form *RR = new RobotomyRequestForm(target);
-	return (RR);
-}
-
-Form	*newPresidentialPardon(std::string target)
-{
-	Form *PP = new PresidentialPardonForm(target);
-	return (PP);
-}
-
-Form *Intern::makeForm(std::string FormName, std::string target)
-{
-	Form *(*FORM_FUNC_ARRAY[5]) (std::string target) = {&newShrubberyCreation, &newRobotomyRequest, &newPresidentialPardon};
-	Form *newForm;
-	for (int i = 0; i < FORM_NUM; i++)
-	{
-		if (FormName == FORM_FUNC_NAME[i])
-		{
-			newForm = FORM_FUNC_ARRAY[i](target);
-			std::cout << BCYN << "Intern creates " << FormName << std::endl;
-			return (newForm);
-		}
-	}
-	throw (Intern::FormNotExist());
-}
 
 
 

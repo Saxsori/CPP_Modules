@@ -10,34 +10,28 @@ int main ()
 
 	std::cout << std::endl << BBLK << "*** TEST VALID FORM ***" << DEFCOLO << std::endl;
 
-	try
+
+	Intern someRandomIntern;
+	Bureaucrat n ("lala", 14);
+	Form* rrf;
+	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	if (rrf)
 	{
-		Intern someRandomIntern;
-		Bureaucrat n ("lala", 14);
-		Form* rrf;
-		rrf = someRandomIntern.makeForm("robotomy request", "Bender");
 		n.signForm(*rrf);
 		n.executeForm(*rrf);
-	}
-	catch(std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
+		delete rrf;
 	}
 
 	std::cout << std::endl << BBLK << "*** TEST INVALID FORM ***" << DEFCOLO << std::endl;
 
-	try
+	Intern someRandomIntern1;
+	Bureaucrat n1 ("lala", 14);
+	Form* rrf1;
+	rrf1 = someRandomIntern1.makeForm("Robotomy request", "Bender");
+	if (rrf1)
 	{
-		Intern someRandomIntern;
-		Bureaucrat n ("lala", 14);
-		Form* rrf;
-		rrf = someRandomIntern.makeForm("Robotomy request", "Bender");
-		n.signForm(*rrf);
-		n.executeForm(*rrf);
+		n1.signForm(*rrf1);
+		n1.executeForm(*rrf1);
+		delete rrf1;
 	}
-	catch(std::exception &e)
-	{
-		std::cout << e.what() << std::endl;
-	}
-	
 }
