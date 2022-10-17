@@ -6,11 +6,11 @@
 #    By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/10 01:40:05 by aaljaber          #+#    #+#              #
-#    Updated: 2022/10/17 09:09:18 by aaljaber         ###   ########.fr        #
+#    Updated: 2022/10/17 10:10:34 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Bureaucrat.cpp Form.cpp
+SRC = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp 
 
 OBJ = ${SRC:.cpp=.o}
 

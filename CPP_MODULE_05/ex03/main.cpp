@@ -7,6 +7,7 @@
 
 int main ()
 {
+
 	std::cout << std::endl << BBLK << "*** TEST VALID FORM ***" << DEFCOLO << std::endl;
 
 	try

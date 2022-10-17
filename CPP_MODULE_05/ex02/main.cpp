@@ -6,6 +6,7 @@
 
 int main ()
 {
+	std::cout << BBLK << "*** TEST NORMAL ***" << DEFCOLO << std::endl;
 	Bureaucrat n ("lala", 42);
 	Form *Sh = new ShrubberyCreationForm("home");
 	n.signForm(*Sh);
@@ -13,15 +14,22 @@ int main ()
 	delete Sh;
 
 	Bureaucrat b ("boo", 42);
-	Form *Rr = new RobotomyRequestForm("home");
+	Form *Rr = new RobotomyRequestForm("request");
 	b.signForm(*Rr);
 	b.executeForm(*Rr);
 	delete Rr;
 
-	Bureaucrat a ("abrar", 42);
-	Form *Pp = new ShrubberyCreationForm("home");
+	Bureaucrat a ("abrar", 2);
+	Form *Pp = new PresidentialPardonForm("pardon");
 	a.signForm(*Pp);
 	a.executeForm(*Pp);
+	delete Sh;
+
+	std::cout << BBLK << "*** TEST LOW EXECUTE GRADE ***" << DEFCOLO << std::endl;
+	Bureaucrat aa ("abrar", 42);
+	Form *test = new PresidentialPardonForm("pardon");
+	aa.signForm(*test);
+	aa.executeForm(*test);
 	delete Sh;
 	
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 21:17:56 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/17 04:40:05 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/17 10:03:12 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,36 +33,13 @@ class RobotomyRequestForm : public Form
 		std::string _target;
 	public:
 		RobotomyRequestForm();
+		RobotomyRequestForm(RobotomyRequestForm &obj);
+		RobotomyRequestForm &operator = (RobotomyRequestForm const &obj);
 		RobotomyRequestForm(std::string target);
 		~RobotomyRequestForm();
 		void		execute(Bureaucrat const & executor) const;
 };
 
-RobotomyRequestForm::RobotomyRequestForm():Form("", 45, 72), _target(""){};
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target):Form(target, 45, 72), _target(target){}
-
-RobotomyRequestForm::~RobotomyRequestForm(){}
-
-void		RobotomyRequestForm::execute(Bureaucrat const & executor) const
-{
-	if (!this->getSign())
-		throw (RobotomyRequestForm::FornNotSigned());
-	if (executor.getGrade() >= this->getGradeEX())
-		throw (RobotomyRequestForm::GradeTooLowException());
-	int	randChoice = rand() % 2;
-	if (randChoice)
-		std::cout << BGRN << this->_target << " has been robotomized successfully" << DEFCOLO << std::endl;
-	else
-		std::cout << BRED << this->_target << " has not been robotomized successfully" << DEFCOLO << std::endl;
-
-	// form is signed 
-	// grade of the bureaucrat attempting to execute the form is high enough.
-	// Otherwise, throw an appropriate exception.
-	
-	//drilling noises
-	//<target> has been robotomized successfully 50% of the time
-	//Otherwise, informs that the robotomy failed
-}
 
 #endif

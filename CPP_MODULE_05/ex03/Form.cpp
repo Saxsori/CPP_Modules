@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 23:36:39 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/17 04:11:48 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/17 10:13:32 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,6 @@ void	Form::beSigned(Bureaucrat &BUR)
 	else
 		throw Form::GradeTooLowException();
 }
-
-
 
 std::ostream &operator << (std::ostream &COUT, Form &obj)
 {

@@ -3,18 +3,18 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+         #
+#    By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/10 01:40:05 by aaljaber          #+#    #+#              #
-#    Updated: 2022/10/13 00:24:11 by aaljaber         ###   ########.fr        #
+#    Updated: 2022/10/17 10:11:40 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Bureaucrat.cpp Form.cpp
+SRC = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp 
 
 OBJ = ${SRC:.cpp=.o}
 
-NAME = Form_up_maggots!
+NAME = No,_you_need_form_28B_not_28C...
 
 CXX = c++
 

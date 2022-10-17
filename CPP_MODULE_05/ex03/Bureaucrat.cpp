@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/12 23:35:50 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/17 04:43:39 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/17 10:14:13 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,14 @@ void Bureaucrat::increaseGrade()
 	this->_grade--;
 }
 
+//execute the form
+/*
+	If it’s successful, print something like:
+			<bureaucrat> executed <form>
+	If not, print an explicit error message.
+
+	try & catch
+*/
 void			Bureaucrat::executeForm(Form const & form)
 {
 	try
@@ -101,15 +109,6 @@ void			Bureaucrat::executeForm(Form const & form)
 	{
 		std::cerr << BYEL << this->getName() << " didn't execute " << form.getName() << " because -> " << e.what() << DEFCOLO << '\n';
 	}
-	
-	//execute the form
-	/*
-	 	If it’s successful, print something like:
-				<bureaucrat> executed <form>
-		If not, print an explicit error message.
-
-		try & catch
-	*/
 }
 
 
