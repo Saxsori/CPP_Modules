@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/13 23:57:40 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/17 15:44:32 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/17 16:34:39 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,6 @@ class Intern
 		Intern &operator = (Intern const &obj);
 		~Intern();
 		Form *makeForm(std::string FormName, std::string target);
-
 };
 
 
