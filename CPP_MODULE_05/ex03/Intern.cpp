@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 15:24:56 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/17 15:43:13 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/17 16:34:08 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,10 @@ Intern::Intern(const Intern &obj){(void)obj;}
 Intern &Intern::operator = (Intern const &obj)
 {
 	(void)obj;
-	return(*this);
+	return (*this);
 }
 
-Intern::~Intern(){
-	//delete 
-}
+Intern::~Intern(){}
 
 Form	*newShrubberyCreation(std::string target)
 {
