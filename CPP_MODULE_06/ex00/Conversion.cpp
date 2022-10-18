@@ -6,13 +6,24 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 20:04:41 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/15 01:24:19 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/18 02:55:17 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Conversion.hpp"
 
 Conversion::Conversion():_isDouble(0), _isFloat(0), _isInt(0), _isChar(0), _decPoint(0), _floatNum(0.0f), _doubleNum(0.0), _intNum(0), _charNum(0), _AsciiStatus(0), _specialCase(""), isNum(0), noDec(0){}
+
+Conversion::Conversion(Conversion &obj)
+{
+	*this = obj;
+}
+
+Conversion &Conversion::operator = (Conversion const &obj)
+{
+	this->_specialCase = obj._specialCase;
+	return (*this);
+}
 
 Conversion::~Conversion(){}
 
@@ -71,16 +82,15 @@ void	Conversion::_AsciiStatusCheck(int num)
 		this->_AsciiStatus = -2;
 }
 
-char	Conversion::_charConversion(char num)
+char	Conversion::_charConversion(char *num)
 {
-	this->_AsciiStatusCheck(num);
-	return (num);
+	this->_AsciiStatusCheck(atoi(num));
+	return (atoi(num));
 }
 
 void	Conversion::_CastChar(char *num)
 {
-	this->_charNum = this->_charConversion(num[0]);
-	std::cout << this->_AsciiStatus << std::endl;
+	this->_charNum = this->_charConversion(num);
 	int Char = static_cast<int>(this->_charNum);
 	if (std::isdigit(this->_charNum) && Char > 0)
 		Char -= 48;

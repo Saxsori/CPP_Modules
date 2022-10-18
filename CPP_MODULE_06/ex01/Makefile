@@ -6,7 +6,7 @@
 #    By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 02:37:33 by aaljaber          #+#    #+#              #
-#    Updated: 2022/10/15 01:42:04 by aaljaber         ###   ########.fr        #
+#    Updated: 2022/10/18 02:59:17 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRC = main.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
-NAME = Conversion_of_scalar_types
+NAME = Serialization
 
 CXX = c++
 

@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 02:38:23 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/15 01:21:41 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/18 02:53:35 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,17 @@
 #include <stdio.h> 
 #include <string.h>
 #include <sstream>
+# define BBLK "\e[1;30m"
+# define BRED "\e[1;31m"
+# define BGRN "\e[1;32m"
+# define BYEL "\e[1;33m"
+# define BBLU "\e[1;34m"
+# define BMAG "\e[1;35m"
+# define BCYN "\e[1;36m"
+# define BWHT "\e[1;37m"
+# define BPUR "\e[0;35m"
+# define DEFCOLO "\033[0m"
+
 
 class Conversion
 {
@@ -38,7 +49,7 @@ class Conversion
 		float		_floatConversion(char *num);
 		double		_doubleConversion(char *num);
 		int			_intConversion(char *num);
-		char		_charConversion(char num);
+		char		_charConversion(char *num);
 		void		_CastChar(char *num);
 		void		_CastInt(char *num);
 		void		_CastFloat(char *num);
@@ -48,6 +59,8 @@ class Conversion
 		int			isNum;
 		int			noDec;
 		Conversion();
+		Conversion(Conversion &obj);
+		Conversion &operator = (Conversion const &obj); 
 		~Conversion();
 		void		DoConversion(char *num);
 		float		getFloat(void);
