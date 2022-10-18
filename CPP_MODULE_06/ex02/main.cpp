@@ -3,59 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 02:19:00 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/15 03:22:48 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/18 07:35:04 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <stdlib.h>     
-
-class Base
-{
-	private:
-		/* data */
-	public:
-		Base(/* args */);
-		virtual ~Base();
-};
-Base::Base(/* args */){}
-Base::~Base(){}
-
-class A : public Base
-{
-	private:
-		/* data */
-	public:
-		A(/* args */);
-		~A();
-};
-A::A(/* args */){}
-A::~A(){}
-
-class B : public Base
-{
-	private:
-		/* data */
-	public:
-		B(/* args */);
-		~B();
-};
-B::B(/* args */){}
-B::~B(){}
-
-class C : public Base
-{
-	private:
-		/* data */
-	public:
-		C(/* args */);
-		~C();
-};
-C::C(/* args */){}
-C::~C(){}
+#include "Base.hpp"
+#include "A.hpp"
+#include "B.hpp"
+#include "C.hpp"
 
 Base * generate(void)
 {

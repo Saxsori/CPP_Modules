@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+         #
+#    By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/14 02:37:33 by aaljaber          #+#    #+#              #
-#    Updated: 2022/10/18 02:59:17 by aaljaber         ###   ########.fr        #
+#    Updated: 2022/10/18 07:28:08 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp
+SRC = main.cpp Data.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
