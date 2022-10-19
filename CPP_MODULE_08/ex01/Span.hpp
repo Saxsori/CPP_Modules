@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 06:03:20 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/19 07:08:24 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/19 09:06:02 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ class span
 		span();
 		span(unsigned int size);
 		span(span &obj);
+		span	&operator = (span &obj);
 		~span();
 		
 		void addnumber(int num);

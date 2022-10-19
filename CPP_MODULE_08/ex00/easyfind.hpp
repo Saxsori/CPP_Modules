@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 05:54:16 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/19 07:12:02 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/19 08:47:56 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,9 @@ class NotFound : public std::exception
 		}
 };
 
-
+/*
+Assoc. containers have no notion of a sequence/indexing
+*/
 template <typename T> 
 typename T::iterator	easyfind (T &conatiner, int something)
 {

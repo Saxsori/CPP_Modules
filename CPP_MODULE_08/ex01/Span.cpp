@@ -6,17 +6,24 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 06:07:30 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/19 06:59:00 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/19 09:05:57 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 
 
-// span::span(span &obj)
-// {
-	
-// }
+span::span(span &obj)
+{
+	*this = obj;
+}
+
+span	&span::operator = (span &obj)
+{
+	this->_size = obj._size;
+	this->_vec = obj._vec;
+	return (*this);
+}
 
 span::span(unsigned int size)
 {

@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 17:24:37 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/19 07:18:59 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/19 08:44:39 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,6 @@ int main ()
 	{
 		std::cerr << e.what() << '\n';
 	}
-	std::cout << "blabla" << std::endl;
+	std::cout << std::endl;
 	
 }
