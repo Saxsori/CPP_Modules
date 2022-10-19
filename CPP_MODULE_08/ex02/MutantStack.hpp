@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Base.hpp                                           :+:      :+:    :+:   */
+/*   MutantStack.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/18 07:32:02 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/18 07:48:18 by aaljaber         ###   ########.fr       */
+/*   Created: 2022/10/18 12:19:28 by aaljaber          #+#    #+#             */
+/*   Updated: 2022/10/18 12:21:39 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BASE_HPP
-#define BASE_HPP
 #include <iostream>
+#include <stack>
 
-class Base
+template <typename T>
+class MutantStack : public std::stack<T>
 {
 	private:
 		/* data */
 	public:
-		Base(/* args */);
-		virtual ~Base();
+		MutantStack(/* args */);
+		~MutantStack();
+	
 };
-
-
-
-#endif

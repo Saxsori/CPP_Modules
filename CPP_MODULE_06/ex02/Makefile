@@ -6,7 +6,7 @@
 #    By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/15 02:18:41 by aaljaber          #+#    #+#              #
-#    Updated: 2022/10/18 07:37:53 by aaljaber         ###   ########.fr        #
+#    Updated: 2022/10/18 07:42:55 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRC = main.cpp Base.cpp A.cpp B.cpp C.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
-NAME = Conversion_of_scalar_types
+NAME = Identify_real_type
 
 CXX = c++
 

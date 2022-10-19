@@ -6,12 +6,11 @@
 /*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 02:19:00 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/18 07:35:04 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/18 07:45:11 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <stdlib.h>     
+   
 #include "Base.hpp"
 #include "A.hpp"
 #include "B.hpp"
@@ -21,7 +20,7 @@ Base * generate(void)
 {
 	Base *base = NULL;
 	int	RandomChoice = 1 + rand() % 3;
-	std::cout << RandomChoice << std::endl;
+	// std::cout << RandomChoice << std::endl;
 	if (RandomChoice == 1)
 		base = new A();
 	if (RandomChoice == 2)
@@ -45,22 +44,22 @@ void identify(Base& p)
 {
 	try 
 	{
-		dynamic_cast<A &>(p);
+		(void)dynamic_cast<A &>(p);
 		std::cout << "A" <<std::endl;
 	}
-	catch(std::exception &e){std::cout << "wrong" <<std::endl;}
+	catch(std::exception &e){/*std::cout << "not A" <<std::endl;*/}
 	try 
 	{
-		dynamic_cast<B &>(p);
+		(void)dynamic_cast<B &>(p);
 		std::cout << "B" <<std::endl;
 	}
-	catch(std::exception &e){std::cout << "wrong" <<std::endl;}
+	catch(std::exception &e){/*std::cout << "not B" <<std::endl;*/}
 	try 
 	{
-		dynamic_cast<C &>(p);
+		(void)dynamic_cast<C &>(p);
 		std::cout << "C" <<std::endl;
 	}
-	catch(std::exception &e){std::cout << "wrong" <<std::endl;}
+	catch(std::exception &e){/*std::cout << "not C" <<std::endl;*/}
 }
 
 int main()
