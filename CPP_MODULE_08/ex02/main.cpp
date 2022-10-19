@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42.fr>          +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 11:18:40 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/18 12:18:44 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/19 05:08:18 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stack>
 #include <iostream>
+#include "MutantStack.hpp"
 
 int main()
 {
@@ -30,6 +31,7 @@ int main()
 	MutantStack<int>::iterator ite = mstack.end();
 	++it;
 	--it;
+	std::cout << "iterate :" << std::endl;
 	while (it != ite)
 	{
 	std::cout << *it << std::endl;
