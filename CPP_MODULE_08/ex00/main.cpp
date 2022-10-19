@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 17:24:37 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/19 05:54:55 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/19 07:18:59 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,23 @@
 
 int main ()
 {
+	
+	std::cout << BBLK << std::endl << "* VECTORS TEST *" << DEFCOLO << std::endl;
 	int mychars[] = {'a','b','c','A','B','C'};
 	std::vector<char> haystack (mychars,mychars+6);
 	std::vector<char>::iterator found;
 	int m = 'A';
+	std::cout << BBLK << std::endl << "*** TEST HOW VECTOR CAN FIND AN ELEMENT ***" << DEFCOLO << std::endl;
 	found = std::find (haystack.begin(), haystack.end(), m);
 	std::cout << "Element found in myvector: " << *found << '\n';
 	
 	for (std::vector<char>::iterator it = found; it!=haystack.end(); ++it)
     	std::cout << ' ' << *it << std::endl;
-	
+		
+	std::cout << BBLK << std::endl << "*** HOW MY EASY FIND IS WORKING ***" << DEFCOLO << std::endl;
 	for (std::vector<char>::iterator it = easyfind(haystack, m); it!=haystack.end(); ++it)
     	std::cout << ' ' << *it << std::endl;	
+	std::cout << BBLK << std::endl << "*** LOOKING FOR UNDEFINED ELEMENT ***" << DEFCOLO << std::endl;
 	try
 	{
 		std::vector<char>::iterator it = easyfind(haystack, 'C');
@@ -38,20 +43,21 @@ int main ()
 		std::cerr << e.what() << '\n';
 	}
 	
+	std::cout << BBLK << std::endl << "* LISTS TEST *" << DEFCOLO << std::endl;
 
-	std::cout << "blabla" << std::endl;
-	
-	
 	std::list<char> lisst (mychars,mychars+6);
 	std::list<char>::iterator blala;
+	std::cout << BBLK << std::endl << "*** TEST HOW LIST CAN FIND AN ELEMENT ***" << DEFCOLO << std::endl;
 	blala = std::find (lisst.begin(), lisst.end(), m);
 	std::cout << "Element found in mylist: " << *found << '\n';
 	
 	for (std::list<char>::iterator it = blala; it!=lisst.end(); ++it)
     	std::cout << ' ' << *it << std::endl;
 	
+	std::cout << BBLK << std::endl << "*** HOW MY EASY FIND IS WORKING ***" << DEFCOLO << std::endl;	
 	for (std::list<char>::iterator it = easyfind(lisst, m); it!=lisst.end(); ++it)
     	std::cout << ' ' << *it << std::endl;	
+	std::cout << BBLK << std::endl << "*** LOOKING FOR UNDEFINED ELEMENT ***" << DEFCOLO << std::endl;
 	try
 	{
 		std::list<char>::iterator li = easyfind(lisst, 'C');
@@ -66,18 +72,20 @@ int main ()
 
 
 	
-	std::cout << "blabla" << std::endl;
+	std::cout << BBLK << std::endl << "* SETS TEST *" << DEFCOLO << std::endl;
 	
 	std::set<char> sett (mychars,mychars+6);
 	std::set<char>::iterator setfound;
+	std::cout << BBLK << std::endl << "*** TEST HOW SET CAN FIND AN ELEMENT ***" << DEFCOLO << std::endl;
 	setfound = std::find (sett.begin(), sett.end(), m);
 	std::cout << "Element found in myset: " << *setfound << '\n';
 	
 	for (std::set<char>::iterator it = setfound; it!=sett.end(); ++it)
     	std::cout << ' ' << *it << std::endl;
-	
+	std::cout << BBLK << std::endl << "*** HOW MY EASY FIND IS WORKING ***" << DEFCOLO << std::endl;	
 	for (std::set<char>::iterator it = easyfind(sett, m); it!=sett.end(); ++it)
-    	std::cout << ' ' << *it << std::endl;	
+    	std::cout << ' ' << *it << std::endl;
+	std::cout << BBLK << std::endl << "*** LOOKING FOR UNDEFINED ELEMENT ***" << DEFCOLO << std::endl;
 	try
 	{
 		std::set<char>::iterator se = easyfind(sett, 'C');

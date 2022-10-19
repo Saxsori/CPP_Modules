@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 05:54:16 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/19 05:54:58 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/19 07:12:02 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,16 @@
 #include <list>
 #include <set>
 #include <stack>
+# define BBLK "\e[1;30m"
+# define BRED "\e[1;31m"
+# define BGRN "\e[1;32m"
+# define BYEL "\e[1;33m"
+# define BBLU "\e[1;34m"
+# define BMAG "\e[1;35m"
+# define BCYN "\e[1;36m"
+# define BWHT "\e[1;37m"
+# define BPUR "\e[0;35m"
+# define DEFCOLO "\033[0m"
 
 class NotFound : public std::exception
 {
