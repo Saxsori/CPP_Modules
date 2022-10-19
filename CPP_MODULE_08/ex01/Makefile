@@ -6,11 +6,11 @@
 #    By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/16 19:23:50 by aaljaber          #+#    #+#              #
-#    Updated: 2022/10/16 19:44:11 by aaljaber         ###   ########.fr        #
+#    Updated: 2022/10/19 06:48:44 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp
+SRC = main.cpp Span.cpp
 
 OBJ = ${SRC:.cpp=.o}
 
