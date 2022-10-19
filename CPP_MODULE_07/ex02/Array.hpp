@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/16 04:21:51 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/16 05:41:02 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/19 02:58:57 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 #define ARRAY_HPP
 #include <iostream>
 #include <exception>
+# define BBLK "\e[1;30m"
+# define BRED "\e[1;31m"
+# define BGRN "\e[1;32m"
+# define BYEL "\e[1;33m"
+# define BBLU "\e[1;34m"
+# define BMAG "\e[1;35m"
+# define BCYN "\e[1;36m"
+# define BWHT "\e[1;37m"
+# define BPUR "\e[0;35m"
+# define DEFCOLO "\033[0m"
 
 template <typename T>
 class Array
@@ -32,7 +42,7 @@ class Array
 			public:
 				const char *what() const throw()
 				{
-					return ("Invalid Size");
+					return (BRED"Invalid Size");
 				}
 		};
 		Array(unsigned int n)
@@ -43,9 +53,7 @@ class Array
 				this->_size = n;
 			}
 			else
-			{
 				throw (Array::WrongSize());
-			}
 		}
 		Array &operator = (Array const &obj)
 		{
@@ -76,7 +84,7 @@ class Array
 			public:
 				const char *what() const throw()
 				{
-					return ("Array index Out Of Bound");
+					return (BRED"Array index Out Of Bound");
 				}
 		};
 		T& operator[](int index)
@@ -100,7 +108,7 @@ template <class T>
 std::ostream & operator << (std::ostream &COUT, const Array<T> &array)
 {
 	for (int i = 0; i < array.size(); i++)
-		COUT << array._array[i] << std::endl;
+		COUT << BCYN << array._array[i] << std::endl;
 	return (COUT);
 }
 

@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 06:55:10 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/19 02:44:09 by aaljaber         ###   ########.fr       */
+/*   Created: 2022/10/19 02:43:05 by aaljaber          #+#    #+#             */
+/*   Updated: 2022/10/19 02:43:57 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iter.hpp"
+#ifndef ITER_HPP
+#define ITER_HPP
+#include <iostream>
 
-int main ()
+template<typename T>
+void func(T &element)
 {
-	int *array = new int[3];
-	array[0] = 1;
-	array[1] = 2;
-	array[2] = 3;
-	iter(array, 3, &func);
-	double *array1 = new double[3];
-	array1[0] = 1.1;
-	array1[1] = 2.2;
-	array1[2] = 3.3;
-	iter(array1, 3, &func);
-	delete [] array;
-	delete [] array1;
+	std::cout << element << std::endl;
 }
+
+template<typename T>
+void	iter(T *array, int length, void (*func)(T &element))
+{
+	for (int i = 0; i < length; i++)
+		func(array[i]);
+}
+
+#endif
