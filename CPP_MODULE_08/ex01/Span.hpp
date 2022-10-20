@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 06:03:20 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/19 09:06:02 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/19 13:55:36 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <list>
 #include <algorithm>
 #include <exception>
+// #include<iterator>
 #include <iterator> // for back_inserter 
 # define BBLK "\e[1;30m"
 # define BRED "\e[1;31m"
@@ -42,12 +43,19 @@ class span
 		span	&operator = (span &obj);
 		~span();
 		
-		void addnumber(int num);
-		template <typename T> 
-		void addnumber(T &container)
-		{
-			std::copy (container.begin(), container.end(), std::back_inserter(this->_vec));
-		}
+		void	addnumber(int num);
+		void	addnumber(std::vector<int>::iterator it1, std::vector<int>::iterator it2);
+
+		// typename T::iterator 
+		// template <typename T>
+		// void addnumber(typename T::iterator it1, typename T::iterator it2)
+		// {
+		// 	typename T::iterator begin;
+		// 	for (begin = it1; begin != it2; begin++)
+		// 		addnumber(*begin);
+		// 	// std::copy (container.begin(), container.end(), std::back_inserter(this->_vec));
+		// }
+
 		int	shortestSpan();
 		int	longestSpan();
 		class InvalidSize : public std::exception

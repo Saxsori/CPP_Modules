@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 06:07:30 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/19 09:05:57 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/10/19 13:54:58 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void span::addnumber(int num)
 		throw(span::InvalidSize());
 }
 
+
 // template <typename T> 
 // void span::addnumber(T &container)
 // {
@@ -47,6 +48,13 @@ void span::addnumber(int num)
 // 	// 	this->addnumber(*it);
 // 	std::copy (container.begin(), container.end(), std::back_inserter(this->_vec));
 // }
+
+void	span::addnumber(std::vector<int>::iterator it1, std::vector<int>::iterator it2)
+{
+	for (std::vector<int>::iterator begin = it1; begin != it2; begin++)
+		addnumber(*begin);
+	// std::copy (container.begin(), container.end(), std::back_inserter(this->_vec));
+}
 
 int	span::shortestSpan()
 {
