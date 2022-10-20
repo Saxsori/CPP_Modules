@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: aaljaber <aaljaber@student.42abudhabi.a    +#+  +:+       +#+         #
+#    By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/04 17:14:21 by aaljaber          #+#    #+#              #
-#    Updated: 2022/10/06 18:42:45 by aaljaber         ###   ########.fr        #
+#    Updated: 2022/10/20 07:22:18 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,22 +16,21 @@ OBJ = ${SRC:.cpp=.o}
 
 NAME = Sed_is_for_losers
 
-CC = c++
+CXX = c++
 
-CFLAGS = -Wall -Werror -Wextra -std=c++98
-
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
+	
 RM = rm -rf
 
 all : ${NAME}
 
 ${NAME} : ${OBJ}
-		${CC} ${CFLAGS} ${OBJ} -o ${NAME}
+		${CXX} ${CXXFLAGS} ${OBJ} -o ${NAME}
 
 clean : 
 		${RM} ${OBJ}
 
 fclean : clean
 		${RM} ${NAME}
-		${RM} file.replace
  
 re : fclean all

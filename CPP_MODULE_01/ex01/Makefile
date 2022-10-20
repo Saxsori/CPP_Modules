@@ -6,7 +6,7 @@
 #    By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/02 21:25:15 by aaljaber          #+#    #+#              #
-#    Updated: 2022/10/02 21:33:59 by aaljaber         ###   ########.fr        #
+#    Updated: 2022/10/20 07:21:58 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,16 +16,16 @@ OBJ = ${SRC:.cpp=.o}
 
 NAME = MoarBrainz
 
-CC = c++
+CXX = c++
 
-CFLAGS = -Wall -Werror -Wextra -std=c++98
-
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
+	
 RM = rm -rf
 
 all : ${NAME}
 
 ${NAME} : ${OBJ}
-		${CC} ${CFLAGS} ${OBJ} -o ${NAME}
+		${CXX} ${CXXFLAGS} ${OBJ} -o ${NAME}
 
 clean : 
 		${RM} ${OBJ}

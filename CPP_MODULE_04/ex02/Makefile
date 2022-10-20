@@ -6,7 +6,7 @@
 #    By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/10 01:40:05 by aaljaber          #+#    #+#              #
-#    Updated: 2022/10/10 05:30:34 by aaljaber         ###   ########.fr        #
+#    Updated: 2022/10/20 07:23:27 by aaljaber         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,16 +16,16 @@ OBJ = ${SRC:.cpp=.o}
 
 NAME = Abstract_class
 
-CC = c++
+CXX = c++
 
-CFLAGS = -Wall -Werror -Wextra -std=c++98
-
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
+	
 RM = rm -rf
 
 all : ${NAME}
 
 ${NAME} : ${OBJ}
-		${CC} ${CFLAGS} ${OBJ} -o ${NAME}
+		${CXX} ${CXXFLAGS} ${OBJ} -o ${NAME}
 
 clean : 
 		${RM} ${OBJ}
