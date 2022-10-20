@@ -1,4 +1,4 @@
-[1](https://www.youtube.com/watch?v=Ix05fozWn0A&t=322s)
+https://www.youtube.com/watch?v=Ix05fozWn0A&t=322s
 
 https://www.youtube.com/watch?v=kjEhqgmEiWY
 
