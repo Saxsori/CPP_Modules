@@ -1,4 +1,4 @@
-# CPP_MODULE
+# CPP_MODULES
  
  ## Resources used in CPP Modules
  
