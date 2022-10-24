@@ -19,6 +19,7 @@ https://stackoverflow.com/questions/55592599/why-is-returning-a-stack-allocated-
 https://www.youtube.com/watch?v=Ru7Tump8fKY
 
 - How to append the content of the file?
+
 http://www.learningaboutelectronics.com/Articles/How-to-append-to-a-file-in-C++.
 php#:~:text=In%20order%20for%20us%20to,explain%20in%20the%20next%20paragraph.&text=
 With%20the%20full%20line%2C%20ofstream,append%20contents%20to%20the%20file.
