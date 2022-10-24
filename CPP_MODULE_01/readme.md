@@ -40,3 +40,7 @@ https://cplusplus.com/forum/beginner/4639/
 
 https://stackoverflow.com/questions/12892281/how-to-free-an-array-of-structure-and-objects-in-c
 
+- Const
+
+https://www.youtube.com/watch?v=4fJBrditnJU
+
