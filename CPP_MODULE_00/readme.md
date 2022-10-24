@@ -1,4 +1,4 @@
-# resources used in CPP00
+# Resources used in CPP00
 
 - Class and Object
 
