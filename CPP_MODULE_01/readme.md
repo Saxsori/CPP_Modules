@@ -5,6 +5,10 @@
 
 https://www.geeksforgeeks.org/pointers-vs-references-cpp/
 
+- Pass by reference
+
+https://www.ibm.com/docs/en/zos/2.4.0?topic=calls-pass-by-reference-c-only
+
 - Memory Allocation in Classes
 
 https://www.cs.fsu.edu/~myers/cop3330/notes/dma.html
