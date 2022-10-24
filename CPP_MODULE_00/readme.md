@@ -22,6 +22,7 @@ https://cplusplus.com/forum/beginner/149840/
 https://stackoverflow.com/questions/51615363/how-to-write-c-getters-and-setters
 
 - String class
+
 https://www.geeksforgeeks.org/stdstring-class-in-c/#:~:text=C%2B%2B%20has%20in%20its%20definition,to%20the%20single%2Dbyte%20character.
 https://stackoverflow.com/questions/9132502/how-are-c-strings-stored
 
