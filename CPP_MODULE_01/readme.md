@@ -20,9 +20,7 @@ https://www.youtube.com/watch?v=Ru7Tump8fKY
 
 - How to append the content of the file?
 
-http://www.learningaboutelectronics.com/Articles/How-to-append-to-a-file-in-C++.
-php#:~:text=In%20order%20for%20us%20to,explain%20in%20the%20next%20paragraph.&text=
-With%20the%20full%20line%2C%20ofstream,append%20contents%20to%20the%20file.
+http://www.learningaboutelectronics.com/Articles/How-to-append-to-a-file-in-C++.php#:~:text=In%20order%20for%20us%20to,explain%20in%20the%20next%20paragraph.&text=With%20the%20full%20line%2C%20ofstream,append%20contents%20to%20the%20file.
 
 - string find function
 https://www.geeksforgeeks.org/string-find-in-cpp/
@@ -30,8 +28,7 @@ https://www.geeksforgeeks.org/string-find-in-cpp/
 - Pointers to member functions
 https://www.ibm.com/docs/en/i/7.3?topic=only-pointers-members-c
 http://websites.umich.edu/~eecs381/handouts/Pointers_to_memberfuncs.pdf
-https://www.tutorialspoint.com/function-pointer-to-member-function-in-cplusplus#:
-~:text=In%20C%2B%2B%20%2C%20function%20pointers%20when,as%20they%20are%20type%20safe.
+https://www.tutorialspoint.com/function-pointer-to-member-function-in-cplusplus#:~:text=In%20C%2B%2B%20%2C%20function%20pointers%20when,as%20they%20are%20type%20safe.
 
 - Array of functions
 
