@@ -1,4 +1,4 @@
-# resources used in CPP01
+# Resources used in CPP01
 
 
 - Pointers Vs References 
