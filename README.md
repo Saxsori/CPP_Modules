@@ -1,4 +1,4 @@
-# CPP_MODULES
+# CPP_MODULES ⚙️
 These Modules have been designed to be a full course of the object-oreinted-programming.
 
 ### [CPP_00](https://github.com/Saxsori/CPP_MODULE/blob/main/CPP_MODULE_00/readme.md): The specifities of the language when compared to C.
