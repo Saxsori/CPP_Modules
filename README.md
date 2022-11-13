@@ -1,5 +1,6 @@
 # CPP_MODULES
-  
+These Modules have been designed to be a full course of the object-oreinted-programming.
+
 ### [CPP_00](https://github.com/Saxsori/CPP_MODULE/blob/main/CPP_MODULE_00/readme.md)
 - <b> Designed to help understand the specifities of the language when compared to C. </b>
 ### [CPP_01](https://github.com/Saxsori/CPP_MODULE/blob/main/CPP_MODULE_01/readme.md)
