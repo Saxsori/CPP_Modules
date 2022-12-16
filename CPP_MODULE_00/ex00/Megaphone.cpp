@@ -6,7 +6,7 @@ int main (int agc, char **agv)
 {
 	for (int j = 1; j < agc; j++)
 	{
-		for (int i = 0; i < strlen(agv[j]); i++)
+		for (size_t i = 0; i < strlen(agv[j]); i++)
 		{
 			if (isalpha(agv[j][i]))
 			{

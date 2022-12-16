@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:14:22 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/06 18:42:02 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/12/16 14:23:27 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ std::string replaceString(std::string line, std::string s1, std::string s2)
 		newline.erase(index, s1.length());
 		newline.insert(index, s2);
 		found = line.find(s1, found + (diff + 1));
-		if (found == std::string::npos || found == first)
+		if (found == (int)std::string::npos || found == first)
 			break ;
 		i = i + diff;
 		// std::cout << BRED << "-->" << newline << DEFCOLO << std::endl;

@@ -6,7 +6,7 @@
 /*   By: aaljaber <aaljaber@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 15:45:47 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/06 18:47:32 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/12/16 14:02:34 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	phonebook::AddContact()
 
 bool phonebook::isNumeric(std::string str)
 {
-	for (int i = 0; i < str.size(); i++)
+	for (size_t i = 0; i < str.size(); i++)
 	{
 		if (std::isdigit(str[i]) == 0)
 			return (false);

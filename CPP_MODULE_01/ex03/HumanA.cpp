@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aaljaber <aaljaber@student.42abudhabi.ae>  +#+  +:+       +#+        */
+/*   By: aaljaber <aaljaber@student.42abudhabi.a    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 13:10:45 by aaljaber          #+#    #+#             */
-/*   Updated: 2022/10/04 14:19:20 by aaljaber         ###   ########.fr       */
+/*   Updated: 2022/12/16 14:05:15 by aaljaber         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	HumanA::attack()
 	std::cout << this->_name << "attacks with their " << this->_weapon.getType() << std::endl;
 }
 
-HumanA::HumanA(std::string name, Weapon &WeaPon) : _name(name), _weapon(WeaPon) {}
+HumanA::HumanA(std::string name, Weapon &WeaPon) : _weapon(WeaPon), _name(name) {}
 
 HumanA::~HumanA(){}
